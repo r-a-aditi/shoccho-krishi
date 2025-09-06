@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Registration | Shoccho Krishi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #457800;
+      padding: 15px;
+      text-align: center;
+    }
+    header h1 {
+      color: white;
+      margin: 0;
+    }
+    .form-container {
+      background: white;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .form-container h2 {
+      text-align: center;
+      color: #457800;
+      margin-bottom: 20px;
+    }
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    form button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #457800;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #5aa321;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Farmer Product Registration</h1>
+  </header>
+
+  <!-- Form Section -->
+  <div class="form-container">
+    <h2>Provide Your Product Details</h2>
+    <form>
+      <label for="farmerName">Name</label>
+      <input type="text" id="farmerName" name="farmerName" placeholder="Enter your full name. You can use your company name as well" required>
+
+      <label for="productName">Product Name</label>
+      <input type="text" id="productName" name="productName" placeholder="e.g. Mango, Rice, Potato" required>
+
+      <label for="varianttName">Variant</label>
+      <input type="text" id="varianttName" name="varianttName" placeholder="e.g. himshagor" required>
+
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select Category --</option>
+        <option value="fruits">Fruits</option>
+        <option value="vegetables">Vegetables</option>
+        <option value="grains">Grains</option>
+        <option value="tea">Tea</option>
+        <option value="others">Others</option>
+      </select>
+
+      <label for="quantity">Quantity (kg)</label>
+      <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" required>
+
+      <label for="price">Price per kg (BDT)</label>
+      <input type="number" id="price" name="price" placeholder="Enter price" min="1" required>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="e.g. Rajshahi, Sylhet" required>
+
+      <label for="contact">Contact Number</label>
+      <input type="text" id="contact" name="contact" placeholder="01*********" required>
+
+      <label for="availability">Availability</label>
+      <select id="availability" name="availability" required>
+        <option value="">-- Select Status --</option>
+        <option value="available">Available Now</option>
+        <option value="preorder">Pre-order</option>
+      </select>
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="notes" placeholder="Write any special notes..."></textarea>
+
+      <!-- Have you use our platform before? -->
+      <label for="usedBefore">Have you used our platform before?</label>
+      <select id="usedBefore" name="usedBefore" required>
+        <option value="">-- Select Option --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>  
+
+      <button type="submit">Submit Product</button>
+
+    </form>
+  </div>
+</body>
+</html>

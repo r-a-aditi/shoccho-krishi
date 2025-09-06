@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | AgroInnovate</title>
+  <link rel="stylesheet" href="style.css"> <!-- link to your main CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    /* Header */
+    header {
+      background-color: #457800;
+      padding: 15px;
+      text-align: center;
+    }
+    header h1 {
+      color: white;
+      margin: 0;
+    }
+
+    /* Search bar */
+    .search-container {
+      margin: 20px auto;
+      text-align: center;
+    }
+    .search-container input {
+      width: 60%;
+      padding: 10px;
+      border: 2px solid #457800;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    /* Buttons for categories */
+    .product-buttons {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .product-buttons a {
+      text-decoration: none;
+      margin: 10px;
+    }
+    .product-buttons .btn {
+      background-color: #457800;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .product-buttons .btn:hover {
+      background-color: #2f5000;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 15px;
+      background: #457800;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Our Products</h1>
+  </header>
+
+<!-- Search Section -->
+<section class="search-container">
+    <form onsubmit="return false;">
+        <input type="text" id="searchInput" placeholder="What do you want to buy?">
+        <button type="submit" style="padding:10px 18px; border:2px solid #457800; background:#457800; color:white; border-radius:8px; font-size:16px; margin-left:8px; cursor:pointer;">
+            Search
+        </button>
+    </form>
+    <script>
+        const input = document.getElementById('searchInput');
+        const form = input.closest('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Replace with search logic
+            alert('Searching for: ' + input.value);
+        });
+    </script>
+</section>
+
+<div style="text-align:center; margin-top:30px;">
+  <p style="color:#457800; font-size:18px; font-weight:bold; margin-bottom:10px;">
+    Suggestions for you
+  </p>
+</div>
+
+<!-- Common Search Buttons -->
+<section class="product-buttons">
+    <a href="mango.html" class="btn">Mango</a>
+    <a href="tea.html" class="btn">Tea leaves</a>
+    <a href="rice.html" class="btn">Rice</a>
+    <a href="potato.html" class="btn">Potato</a>
+    <a href="watermelon.html" class="btn">Watermelon</a>
+</section>
+
+</body>
+</html>
